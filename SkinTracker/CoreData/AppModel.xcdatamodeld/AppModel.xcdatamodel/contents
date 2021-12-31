@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BodyPhoto" representedClassName="BodyPhoto" syncable="YES" codeGenerationType="class">
+        <attribute name="addDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="contentOffsetX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="contentOffsetY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="zoomScale" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="bodyPoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BodyPoint" inverseName="photos" inverseEntity="BodyPoint"/>
+    </entity>
+    <entity name="BodyPoint" representedClassName="BodyPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="addDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastPhotoDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="preview" optional="YES" attributeType="Binary"/>
+        <attribute name="sideType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BodyPhoto" inverseName="bodyPoint" inverseEntity="BodyPhoto"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="bodyPoints" inverseEntity="User"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES" codeGenerationType="class">
+        <attribute name="notificationPeriod" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isSubUser" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastSelection" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="bodyPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BodyPoint" inverseName="user" inverseEntity="BodyPoint"/>
+    </entity>
+    <elements>
+        <element name="BodyPhoto" positionX="-126.947509765625" positionY="329.7158203125" width="128" height="134"/>
+        <element name="BodyPoint" positionX="-271.2564697265625" positionY="35.299072265625" width="128" height="149"/>
+        <element name="Settings" positionX="-87.7725830078125" positionY="25.23257446289062" width="128" height="44"/>
+        <element name="User" positionX="-397.4495849609375" positionY="-137.4290466308594" width="128" height="104"/>
+    </elements>
+</model>

@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Camera-SwiftUI",
+        "repositoryURL": "https://github.com/rorodriguez116/Camera-SwiftUI",
+        "state": {
+          "branch": null,
+          "revision": "bec647c47f45cdfd588dd50e07571fb2642f4575",
+          "version": "0.0.5"
+        }
+      },
+      {
+        "package": "RadioGroup",
+        "repositoryURL": "https://github.com/yonat/RadioGroup.git",
+        "state": {
+          "branch": null,
+          "revision": "c2ce6b275fbd8ef970f85349d03e7ea0615ed495",
+          "version": "1.4.4"
+        }
+      },
+      {
+        "package": "SweeterSwift",
+        "repositoryURL": "https://github.com/yonat/SweeterSwift",
+        "state": {
+          "branch": null,
+          "revision": "375a2603e98c8b59c53c9d2096f5443d78861bff",
+          "version": "1.1.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
